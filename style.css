@@ -18,11 +18,58 @@
   max-width: 1360px;
   margin: 0 auto;
 }
+.e1:hover h2 {
+  color: white;
+}
 
 .hero_box {
   max-width: 42rem;
 }
+.hero_animation {
+  animation: fadeIn 5s linear infinite;
+}
+.hero_img {
+  animation: zoomInOut 5s linear infinite alternate;
+}
+.hero_btn {
+  animation: pulseButton 2s ease-in-out infinite;
+}
+/* for image */
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    /* transform: scale(1.2); */
+    transform: scale(1.1);
+  }
+}
+/* for text */
+@keyframes fadeIn {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+/* for button */
+@keyframes pulseButton {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
+/* media query */
 @media screen and (max-width: 768px) {
   .box {
     /* max-width: 99%; */
